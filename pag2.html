@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorpresa Esmeralda 💚</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #50C878; /* Verde Esmeralda */
+            color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        .cloud {
+            position: absolute;
+            width: 150px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            animation: moveClouds 15s linear infinite;
+        }
+        .cloud:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-duration: 18s;
+        }
+        .cloud:nth-child(2) {
+            top: 30%;
+            left: 60%;
+            animation-duration: 22s;
+        }
+        .cloud:nth-child(3) {
+            top: 40%;
+            left: 30%;
+            animation-duration: 20s;
+        }
+        @keyframes moveClouds {
+            from {
+                transform: translateX(-200px);
+            }
+            to {
+                transform: translateX(100vw);
+            }
+        }
+        .letter {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .letter p {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="letter">
+        <h1 style="color: black;">Feliz cumpleaños Amor </h1>
+        <p style="color: black;">
+            Amor, tú eres mi razón para sonreír todos los días. Cada momento que paso contigo se convierte en un recuerdo que guardaré para siempre. Gracias por ser mi todo y por hacer que cada día sea especial. ¡Te amo más de lo que las palabras pueden expresar! 💖<br>
+            Te deseo un feliz cumpleañosmi vida💖💖<br><br>
+            💖Alejandro y Ahide #05💖
+        </p>
+    </div>
+</body>
+</html>

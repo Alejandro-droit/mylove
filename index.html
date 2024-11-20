@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños 🎉</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .card {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: #ff6f61;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #ff3d3d;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>¡Feliz Cumpleaños, Amor! 💖</h1>
+        <p>
+            Hoy es un día especial porque celebramos a la persona más increíble del mundo.  
+            Eres mi todo y espero que este detalle te saque una sonrisa. 🥰
+        </p>
+        <button onclick="showSurprise()">¡Presiona aquí para una sorpresa!</button>
+    </div>
+
+    <audio id="romantic-music" autoplay loop>
+        <source src="love.mpeg" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <script>
+        function showSurprise() {
+            const music = document.getElementById('romantic-music');
+            music.play(); // Asegurar que la música sigue sonando
+            alert("🎉 ¡Te amo con todo mi corazón, feliz cumpleaños! 🎉");
+
+            // Abrir nueva pestaña con la sorpresa
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="es">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Te Amo 💖</title>
+                    <style>
+                        body {
+                            font-family: 'Arial', sans-serif;
+                            background: linear-gradient(to bottom right, #ff9a9e, #fecfef);
+                            margin: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            color: white;
+                            text-align: center;
+                        }
+                        h1 {
+                            font-size: 3em;
+                            color: #ff6f61;
+                            text-shadow: 0 0 15px #ff6f61, 0 0 30px #ff3d3d;
+                        }
+                        p {
+                            font-size: 1.5em;
+                        }
+                        .btn-surprise {
+                            margin-top: 30px;
+                            padding: 15px 25px;
+                            background-color: #ff6f61;
+                            border: none;
+                            border-radius: 50px;
+                            color: white;
+                            font-size: 18px;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+                        }
+                        .btn-surprise:hover {
+                            background-color: #ff3d3d;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>¡Sorpresa! 🎉</h1>
+                    <p>Este es solo otro pequeño detalle para recordarte cuánto te amo. ❤️</p><br><br>
+                    <p>Gracias por ser mi todo. 🥰</p><br><br>
+
+                    <!-- Botón para vincular con otro archivo HTML -->
+                    <button class="btn-surprise" onclick="window.location.href = 'pag2.html';">
+                        Presiona para otra sorpresa cariño💌
+                    </button>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</body>
+</html>
